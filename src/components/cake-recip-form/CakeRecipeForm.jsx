@@ -85,7 +85,6 @@ const CakeRecipeForm = () => {
                     >
                         Add Cake
                     </button>
-                    
                 </div>
             </form>
         </>
