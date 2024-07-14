@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CakeRecipeForm from './components/cake-recip-form/CakeRecipeForm';
+import CakeRecipePlanner from './components/cake-recip-planner/CakeRecipePlanner';
 import ShoppingList  from './components/shopping-list/ShoppingList';
 import { useCakeContext} from './context/CakeProvider'
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App background">
       <div className="content">
-        <CakeRecipeForm />
+        <CakeRecipePlanner />
         {displayShoppingList && <ShoppingList />}
       </div>
     </div>
