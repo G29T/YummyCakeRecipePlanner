@@ -2,6 +2,10 @@
 The Cake Recipe Planner app is designed for managing cake recipes within a React web app.
 It provides a form where users can input a cake name, add ingredients with their respective quantities, and submit the recipe. 
 Additionally, it includes features to dynamically add/remove ingredients and print a shopping list based on the last added recipe.
+Currently, the Cake History serves as a proof of concept. The add and edit buttons are non-functional at this time. 
+In future development, users will have the capability to delete or edit cakes they have previously added. 
+Additionally, users will be able to view corresponding shopping lists associated with each cake entry.
+
 
 ## Using the Cake Recipe Form
 Enter a cake name in the input field.
@@ -17,6 +21,8 @@ Click "Print Shopping List" button to generate a shopping list based on the last
 ## Future Developments:
 Store newly added cakes in a database for efficient management.
 Introduce a search feature to enable users to find added cakes and view their corresponding recipes.
+Users will gain the ability to delete or edit cakes they've previously added, which will be accessible via the Cake History section or other parts of the user interface.
+Additionally, users will have the option to view the corresponding shopping lists associated with each cake entry.
 
 ## Technologies Used
 React.js
@@ -25,6 +31,7 @@ Jest for unit and integration testing
 Cypress for end-to-end testing
 Tailwind CSS
 uuid for geerating unique IDs
+Heroicons
 
 ## Prerequisites
 Node.js installed on your machine
@@ -35,6 +42,7 @@ Clone the repository to your local machine.
 Navigate to the project directory: cd CakeRecipePlanner
 Install dependencies: npm install
 npm install uuid
+npm install @heroicons/react
 
 
 ## Available Scripts
