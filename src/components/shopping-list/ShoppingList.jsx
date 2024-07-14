@@ -18,21 +18,21 @@ export const ShoppingList = () => {
     };
 
     return (
-        <div className="relative max-w-sm mx-auto mt-10 p-4 border border-white bg-gray-600 bg-opacity-50 rounded-lg">
+        <div className="relative max-w-xs md:max-w-md lg:max-w-xl xl:max-w-2xl mx-auto mt-10 p-4 border border-white bg-gray-600 bg-opacity-50 rounded-lg">
              <button
                 type="button"
                 data-testid="add-ingredient"
                 onClick={() =>  closeShoppingList(false)}
                 className="absolute top-2 right-2 text-white cursor-pointer"
             >
-                <XMarkIcon className="h-7 w-7"/>
+                <XMarkIcon className="h-7 w-7 md:h-8 md:w-8 lg:h-9 lg:w-9"/>
             </button>
-            <p className="text-xl font-bold text-white mb-4">Shopping list</p>
+            <p className="text-lg md:text-xl lg:text-2xl text-white font-bold mb-4">Shopping list</p>
             {Object.entries(shoppingList || {})
                 .map(([ingredient, quantity]) => (
                     <div key={uuidv4()} className="flex justify-between items-center">
-                        <p className="text-white font-bold">{ingredient}</p>
-                        <p className="text-white font-bold">{quantity}{displayMetric(ingredient)}</p>
+                        <p className="text-white font-bold text-base md:text-lg lg:text-xl">{ingredient}</p>
+                        <p className="text-white font-bold text-base md:text-lg lg:text-xl">{quantity}{displayMetric(ingredient)}</p>
                     </div>
                 ))
             }  
