@@ -26,19 +26,15 @@ export const CakeProvider = ({ children}) => {
 
         if(!isEmpty){ 
             const ingredientMap = {};
-            // console.log('print', Object.values(cakes).map(item => item.ingredients))
        
             Object.values(cakes).map(item => item.ingredients).flat().forEach(ingredient => { 
                 const { ingredient: ingredientName, quantity } = ingredient;
                 if (ingredientMap[ingredientName]) {
-                    ingredientMap[ingredientName] += parseInt(ingredient.quantity || '0')
+                    ingredientMap[ingredientName] += parseInt(quantity || '0')
                 } else {
-                    ingredientMap[ingredientName] = parseInt(ingredient.quantity || '0');
+                    ingredientMap[ingredientName] = parseInt(quantity || '0');
                 }
             })
-    
-            // console.log("Ingredient Map" + JSON.stringify(ingredientMap))
-    
 
             setShoppingList(ingredientMap);
             setDisplayShoppingList(true);
