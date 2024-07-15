@@ -10,6 +10,7 @@ The application recalculates the shopping list automatically when a cake is dele
 
 In future development, users will be able to view cake recipes and make modifications to ingredients and quantities. They will also be able to access past shopping lists along with associated cakes, and adjust the recipes accordingly.
 
+The app can be accessed via https://curious-kashata-97ecb9.netlify.app/
 
 ## Using the app
 ### Form
