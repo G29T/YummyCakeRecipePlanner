@@ -7,9 +7,11 @@ import { XCircleIcon } from '@heroicons/react/24/solid';
 
 const CakeRecipeForm = () => {
 
-    const { updateCakes } = useCakeContext()
+    const { updateCakes, displayShoppingList } = useCakeContext()
     const [cakeName, setCakeName] = useState('');
     const [cakeIngredients, setCakeIngredients] = useState([{  id: uuidv4(), quantity: '', ingredient: '' }]);
+    const formStyle = "max-w-md ml-2 md:ml-3 lg:ml-4 p-4 md:p-6 lg:p-8 border border-white bg-gray-600 bg-opacity-50 rounded-lg" ;
+    const formConditionalStyle = displayShoppingList ? "mb-16" : "mb-28";
 
     const handleAddIngredient = () => {
         setCakeIngredients([...cakeIngredients, { id: uuidv4(), quantity: '', ingredient: '' }]);
@@ -25,7 +27,6 @@ const CakeRecipeForm = () => {
         const newIngredients = cakeIngredients.filter(ingredient => ingredient.id !== id);
         setCakeIngredients(newIngredients);
     };
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -45,7 +46,7 @@ const CakeRecipeForm = () => {
     return(
         <>
             <form
-                className="max-w-md ml-2 md:ml-3 lg:ml-4 mb-24 p-4 md:p-6 lg:p-8 border border-white bg-gray-600 bg-opacity-50 rounded-lg"
+                className={`${formStyle} ${formConditionalStyle}`}
                 onSubmit={handleSubmit}
             >
                 <p className="text-white text-center text-lg md:text-xl lg:text-2xl font-bold mb-4">What are you cooking today?</p>
