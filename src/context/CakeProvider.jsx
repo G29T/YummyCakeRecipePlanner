@@ -34,7 +34,7 @@ export const CakeProvider = ({ children}) => {
                 }
             }));
         }
-    }, [cakes]);
+    }, []);
 
     const updateCakes = useCallback((data) => { 
         setCakes((prev) => ({  ...prev, ...data}) );
