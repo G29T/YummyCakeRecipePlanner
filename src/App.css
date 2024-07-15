@@ -14,8 +14,6 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh;
-  overflow-y: auto; 
-  overflow-x: hidden; 
 }
 
 .background {
@@ -31,7 +29,17 @@ body {
 }
 
 .content {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
+  overflow-y: auto; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
