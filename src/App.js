@@ -9,8 +9,8 @@ function App() {
   const { displayShoppingList } = useCakeContext();
 
   return (
-    <div className="App background">
-      <div className="content mb-40 hide-scrollbar">
+    <div className="w-full App background">
+      <div className="w-full content hide-scrollbar">
         <CakeRecipePlanner />
         {displayShoppingList && <ShoppingList />}
       </div>
