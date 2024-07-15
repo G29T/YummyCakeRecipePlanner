@@ -38,7 +38,7 @@ Click "Print Shopping List" button to generate a shopping list.
 ## Technologies Used
 - React.js
 - JavaScript
-- Jest for unit and integration testing
+- Jest
 - Cypress for end-to-end testing
 - Tailwind CSS
 - uuid for geerating unique IDs
@@ -50,11 +50,11 @@ Node.js installed on your machine
 npm
 
 ## Installation
-Clone the repository to your local machine.
-Navigate to the project directory: cd CakeRecipePlanner
-Install dependencies: npm install
-npm install uuid
-npm install @heroicons/react
+- Clone the repository to your local machine.
+- Navigate to the project directory: cd CakeRecipePlanner
+- Install dependencies: npm install
+- npm install uuid
+- npm install @heroicons/react
 
 
 ## Available Scripts
