@@ -29,7 +29,7 @@ body {
 }
 
 .content {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
   overflow-y: auto; 
