@@ -20,17 +20,19 @@ export const CakeProvider = ({ children}) => {
         const updatedCakes = { ...cakes };
         delete updatedCakes[cakeId];
         setCakes(updatedCakes);
+        setDisplayShoppingList(false);
     }, [cakes]);
 
     const editCakeName = useCallback((cakeId) => { 
         const newCakeName = prompt('Enter new cake name:');
         if (newCakeName) {
-            updateCakes({
+            setCakes((prevCakes) => ({
+                ...prevCakes,
                 [cakeId]: {
-                    ...cakes[cakeId],
+                    ...prevCakes[cakeId],
                     name: newCakeName
                 }
-            });
+            }));
         }
     }, [cakes]);
 
