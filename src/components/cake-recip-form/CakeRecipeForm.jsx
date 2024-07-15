@@ -39,7 +39,7 @@ const CakeRecipeForm = () => {
     return(
         <>
             <form
-                className="max-w-md mx-auto p-4 md:p-6 lg:p-8 border border-white bg-gray-600 bg-opacity-50 rounded-lg"
+                className="max-w-md mx-auto mb-40 p-4 md:p-6 lg:p-8 border border-white bg-gray-600 bg-opacity-50 rounded-lg"
                 onSubmit={handleSubmit}
             >
                 <p className="text-white text-center text-lg md:text-xl lg:text-2xl font-bold mb-4">What are you cooking today?</p>
