@@ -10,7 +10,7 @@ const CakeRecipePlanner = () => {
     return(
         <div className="flex justify-center items-center mt-8">
             <div className="flex flex-col md:flex-row max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl space-y-8 md:space-y-0 md:space-x-3">
-                <div className="w-full md:w-1/3 p-4 md:p-6 lg:p-8 max-h-80 mt-2 overflow-y-auto border border-white bg-gray-600 bg-opacity-50 rounded-lg">
+                <div className="w-full md:w-1/3 p-4 md:p-6 lg:p-8 max-h-80 mt-2 overflow-y-auto overflow-x-auto border border-white bg-gray-600 bg-opacity-50 rounded-lg">
                     <CakeHistory />
                 </div>
                 <div className="w-full md:w-2/3">
