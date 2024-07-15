@@ -4,6 +4,8 @@ export const CakeContext = createContext({
     cakes: {},
     shoppingList: {}, 
     displayShoppingList: false,
+    deleteCake: (data) => {},
+    editCakeName: (data) => {},
     updateCakes: (data) => {},
     printShoppingList: () => {},
     setDisplayShoppingList: () => Boolean
@@ -13,6 +15,24 @@ export const CakeProvider = ({ children}) => {
     const [cakes, setCakes] = useState({});
     const [shoppingList, setShoppingList] = useState({});
     const [displayShoppingList, setDisplayShoppingList] = useState(false);
+
+    const deleteCake = useCallback((cakeId) => { 
+        const updatedCakes = { ...cakes };
+        delete updatedCakes[cakeId];
+        setCakes(updatedCakes);
+    }, [cakes]);
+
+    const editCakeName = useCallback((cakeId) => { 
+        const newCakeName = prompt('Enter new cake name:');
+        if (newCakeName) {
+            updateCakes({
+                [cakeId]: {
+                    ...cakes[cakeId],
+                    name: newCakeName
+                }
+            });
+        }
+    }, [cakes]);
 
     const updateCakes = useCallback((data) => { 
         setCakes((prev) => ({  ...prev, ...data}) );
@@ -50,7 +70,7 @@ export const CakeProvider = ({ children}) => {
     }, []);
     
     return ( 
-        <CakeContext.Provider value={{ cakes, updateCakes, shoppingList, printShoppingList, displayShoppingList, closeShoppingList }}>{children}</CakeContext.Provider>
+        <CakeContext.Provider value={{ cakes, deleteCake, editCakeName, updateCakes, shoppingList, printShoppingList, displayShoppingList, closeShoppingList }}>{children}</CakeContext.Provider>
     )
 }
 

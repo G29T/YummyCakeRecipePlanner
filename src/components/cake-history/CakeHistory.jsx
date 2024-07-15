@@ -2,7 +2,7 @@ import { useCakeContext} from '../../context/CakeProvider'
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/solid';
 
 const CakeHistory = () => {
-    const { cakes} = useCakeContext();
+    const { cakes, deleteCake, editCakeName } = useCakeContext();
 
     return(
         <>
@@ -15,6 +15,7 @@ const CakeHistory = () => {
                             <button
                                 type="button"
                                 className="text-white hover:text-gray-300"
+                                onClick={() => editCakeName(cakeKey)}
                                 
                             >
                                 <PencilIcon className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-1" />
@@ -22,7 +23,7 @@ const CakeHistory = () => {
                             <button
                                 type="button"
                                 className=" text-white hover:text-gray-300 "
-                                
+                                onClick={() => deleteCake(cakeKey)}
                             >
                                 <TrashIcon className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                             </button>
