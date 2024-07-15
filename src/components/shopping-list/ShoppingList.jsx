@@ -18,7 +18,7 @@ export const ShoppingList = () => {
     };
 
     return (
-        <div className="relative max-w-xs md:max-w-md lg:max-w-xl xl:max-w-2xl mx-auto mb-40 p-4 border border-white bg-gray-600 bg-opacity-50 rounded-lg">
+        <div className="relative max-w-xs md:max-w-md lg:max-w-xl xl:max-w-2xl mx-auto mb-24 p-4 border border-white bg-gray-600 bg-opacity-50 rounded-lg">
              <button
                 type="button"
                 data-testid="add-ingredient"
