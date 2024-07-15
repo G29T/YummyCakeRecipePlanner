@@ -1,10 +1,13 @@
 # Description
 The Cake Recipe Planner app is designed for managing cake recipes within a React web app.
-It provides a form where users can input a cake name, add ingredients with their respective quantities, and submit the recipe. 
+It provides a form where users can input a cake name, add ingredients with their respective quantities, and submit the recipe.
 Additionally, it includes features to dynamically add/remove ingredients and print a shopping list based on the last added recipe.
+
 Inside the Cake History section the users can click on the pencil icon to edit the name of a cake. 
 Furthermore, cakes can be removed from the list by clicking on the delete button/bin icon.
+
 The application recalculates the shopping list automatically when a cake is deleted.
+
 In future development, users will be able to view cake recipes and make modifications to ingredients and quantities. They will also be able to access past shopping lists along with associated cakes, and adjust the recipes accordingly.
 
 
@@ -20,14 +23,19 @@ A success message will alert upon successful submission
 ### Cake History
 Users can click on the pencil icon to edit the name of a cake.
 Cakes can be removed from the list by clicking on the delete button/bin icon.
-The application recalculates the shopping list automatically when a cake is deleted. The shopping list disappears after deletion and can be refreshed by pressing "Print Shopping List" again.
+The application recalculates the shopping list automatically when a cake is deleted. 
+The shopping list disappears after deletion and can be refreshed by pressing "Print Shopping List" again.
 
 ### Printing Shopping List:
 Click "Print Shopping List" button to generate a shopping list based on the last added cake recipes.
 
 ## Future Developments:
 Store newly added cakes in a database for efficient management.
-Introduce a search feature to enable users to find added cakes and view their corresponding recipes. Add functionality so that users can modify the ingredients and quantities.
+
+Introduce a search feature to enable users to find added cakes and view their corresponding recipes. 
+
+Add functionality so that users can modify the ingredients and quantities.
+
 Users will be able to access past shopping lists along with associated cakes, and adjust the recipes accordingly.
 
 
