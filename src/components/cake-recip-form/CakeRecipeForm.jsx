@@ -29,6 +29,12 @@ const CakeRecipeForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if(cakeIngredients.length === 0){
+            alert('You must add at least one ingredient before adding the cake');
+            return;
+        }
+
         const cakeId = `cake_${Date.now()}`
         updateCakes({ [cakeId]: { name: cakeName, ingredients: cakeIngredients } })
         setCakeName('');
