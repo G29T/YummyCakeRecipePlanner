@@ -11,7 +11,7 @@ const CakeRecipeForm = () => {
     const [cakeName, setCakeName] = useState('');
     const [cakeIngredients, setCakeIngredients] = useState([{  id: uuidv4(), quantity: '', ingredient: '' }]);
     const formStyle = "max-w-md ml-2 md:ml-3 lg:ml-4 p-4 md:p-6 lg:p-8 border border-white bg-gray-600 bg-opacity-50 rounded-lg" ;
-    const formConditionalStyle = displayShoppingList ? "mb-16" : "mb-32";
+    const formConditionalStyle = displayShoppingList ? "mb-14" : "mb-32";
 
     const handleAddIngredient = () => {
         setCakeIngredients([...cakeIngredients, { id: uuidv4(), quantity: '', ingredient: '' }]);
