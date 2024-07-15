@@ -2,7 +2,7 @@ import React from 'react';
 import { useCakeContext} from '../../context/CakeProvider';
 import CakeHistory from '../cake-history/CakeHistory';
 import { PrinterIcon } from '@heroicons/react/24/solid';
-import CakeRecipeForm from '../cake-recip-form/CakeRecipeForm';
+import CakeRecipeForm from '../cake-recipe-form/CakeRecipeForm';
 
 const CakeRecipePlanner = () => {
     const { printShoppingList } = useCakeContext()
