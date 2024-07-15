@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App background">
-      <div className="content mb-40 ">
+      <div className="content mb-40">
         <CakeRecipePlanner />
         {displayShoppingList && <ShoppingList />}
       </div>
