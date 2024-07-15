@@ -36,14 +36,14 @@ Click "Print Shopping List" button to generate a shopping list.
 
 
 ## Technologies Used
-React.js
-JavaScript
-Jest for unit and integration testing
-Cypress for end-to-end testing
-Tailwind CSS
-uuid for geerating unique IDs
-Heroicons
-background picture from pixabay
+- React.js
+- JavaScript
+- Jest for unit and integration testing
+- Cypress for end-to-end testing
+- Tailwind CSS
+- uuid for geerating unique IDs
+- Heroicons
+- background picture from pixabay
 
 ## Prerequisites
 Node.js installed on your machine
