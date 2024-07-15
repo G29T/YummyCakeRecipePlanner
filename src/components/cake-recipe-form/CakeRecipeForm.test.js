@@ -73,7 +73,7 @@ describe('CakeRecipeForm', () => {
         expect(mockHandleIngredientSelect).toHaveBeenCalledWith(0, 'ingredient', 'flour');
     });
 
-    test('it submits the form and updates cakes context', async () => {
+    test('it submits the form successfully', async () => {
         render(<CakeRecipeForm />, { wrapper: MockCakeProvider });
 
         const cakeNameInput = screen.getByPlaceholderText('Cake Name');
