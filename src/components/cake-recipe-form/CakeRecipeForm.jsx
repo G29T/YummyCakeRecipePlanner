@@ -24,8 +24,10 @@ const CakeRecipeForm = () => {
     };
 
     const removeIngredient = (id) => {
-        const newIngredients = cakeIngredients.filter(ingredient => ingredient.id !== id);
-        setCakeIngredients(newIngredients);
+        if(cakeIngredients.length > 1){
+            const newIngredients = cakeIngredients.filter(ingredient => ingredient.id !== id);
+            setCakeIngredients(newIngredients);
+        }
     };
 
     const handleSubmit = (e) => {
