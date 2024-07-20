@@ -52,7 +52,7 @@ npm
 
 ## Installation
 - Clone the repository to your local machine.
-- Navigate to the project directory: cd CakeRecipePlanner
+- Navigate to the project directory: cd YummyCakeRecipePlanner
 - Install dependencies: npm install
 - npm install uuid
 - npm install @heroicons/react
