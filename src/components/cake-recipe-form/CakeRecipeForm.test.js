@@ -20,7 +20,7 @@ afterEach(() => {
 
 
 describe('CakeRecipeForm', () => { 
-    test('it renders the Add Ingredient and Add Cake buttons', () => {
+    test('renders the Add Ingredient and Add Cake buttons', () => {
         render(<CakeRecipeForm />);
 
         const addIngredientButton = screen.getByTestId('add-ingredient');
@@ -30,14 +30,14 @@ describe('CakeRecipeForm', () => {
         expect(addCakeButton).toBeInTheDocument();
     });
 
-    test('it renders IngredientList component', () => {
+    test('renders IngredientList component', () => {
         render(<CakeRecipeForm />);
 
         const ingredientList = screen.getByTestId('ingredient-list-0');
         expect(ingredientList).toBeInTheDocument();
     });
 
-    test('it adds an ingredient when Add Ingredient button is clicked', () => {
+    test('adds an ingredient when Add Ingredient button is clicked', () => {
         render(<CakeRecipeForm />);
     
         fireEvent.click(screen.getByTestId('add-ingredient'));
@@ -52,7 +52,7 @@ describe('CakeRecipeForm', () => {
         expect(ingredientSelect2).not.toBeInTheDocument();
     });
     
-    test('it renders quantity input and select fields', () => {
+    test('renders quantity input and select fields', () => {
         render(<IngredientList index={0} ingredients={ingredientsData} handleIngredientSelect={() => {}} />);
     
         const quantityInput = screen.getByTestId('ingredient-quantity-0');
@@ -62,7 +62,7 @@ describe('CakeRecipeForm', () => {
         expect(ingredientSelect).toBeInTheDocument();
       });
 
-    test('it handles ingredient selection', () => {
+    test('handles ingredient selection', () => {
         const mockHandleIngredientSelect = jest.fn();
         render(<IngredientList index={0} ingredients={ingredientsData} handleIngredientSelect={mockHandleIngredientSelect} />);
     
@@ -73,7 +73,7 @@ describe('CakeRecipeForm', () => {
         expect(mockHandleIngredientSelect).toHaveBeenCalledWith(0, 'ingredient', 'flour');
     });
 
-    test('it submits the form successfully', async () => {
+    test('submits the form successfully', async () => {
         render(<CakeRecipeForm />, { wrapper: MockCakeProvider });
 
         const cakeNameInput = screen.getByPlaceholderText('Cake Name');
